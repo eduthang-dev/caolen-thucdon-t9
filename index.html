@@ -98,6 +98,13 @@ mark{background:linear-gradient(transparent 58%,var(--vang) 58%);color:inherit;p
 .mau .dau{margin-bottom:22px;display:grid;gap:8px}
 .mau .dau p{color:var(--nhat);max-width:62ch}
 .bang-wrap{overflow-x:auto;background:var(--mat);border-radius:18px;box-shadow:var(--bong)}
+.anh-demo{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-top:8px}
+.anh-demo figure{margin:0;background:#fff;border:1px solid var(--vien);border-radius:14px;overflow:hidden}
+.anh-demo img{display:block;width:100%;height:auto;max-width:100%}
+.anh-demo figcaption{padding:10px 14px;font-size:.9rem;color:var(--nhat);border-top:1px solid var(--vien)}
+.anh-demo figcaption b{color:var(--do-dam);margin-right:6px}
+.anh-goi-y{font-size:.85rem;color:var(--nhat);margin-top:10px}
+@media (max-width:640px){.anh-demo{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding-bottom:6px}.anh-demo figure{flex:0 0 88%;scroll-snap-align:start}}
 .bang{width:100%;border-collapse:collapse;min-width:640px;font-size:.93rem}
 .bang th{text-align:left;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--nhat);padding:14px 16px;border-bottom:1px solid var(--vien)}
 .bang td{padding:12px 16px;border-bottom:1px solid var(--vien);vertical-align:top}
@@ -274,21 +281,16 @@ h2{color:var(--do-dam)}
   <section class="mau">
     <div class="dau">
       <p class="nhan">Xem trước</p>
-      <h2>Một ngày trong bộ thực đơn: Thứ Ba 01/09</h2>
-      <p>Mỗi món ghi rõ định lượng cho 3 nhóm tuổi. Bản đầy đủ còn phần giải thích dinh dưỡng cho từng món.</p>
+      <h2>Thực đơn thật, chụp từ bộ tài liệu</h2>
+      <p>Mỗi ngày một trang: món ăn, nguyên liệu, định lượng cho 3 nhóm tuổi và ghi chú dinh dưỡng cho từng món. Dưới đây là 4 ngày ở 4 chặng khác nhau.</p>
     </div>
-    <div class="bang-wrap">
-      <table class="bang">
-        <thead><tr><th>Bữa</th><th>Món</th><th>6–10t / 11–15t / 16–18t</th></tr></thead>
-        <tbody>
-          <tr><td class="bua">Sáng<small>trước 7h30</small></td><td>Trứng gà ta luộc · Sữa tươi không đường · Phở bò tái</td><td class="dl">1 / 1 / 2 quả · 180 / 200 / 240ml</td></tr>
-          <tr><td class="bua">Phụ sáng</td><td>Sữa chua không đường · Hồng xiêm chín</td><td class="dl">1 / 1 / 1–2 hộp · 1 / 1–2 / 2 quả</td></tr>
-          <tr><td class="bua">Trưa</td><td>Thịt heo kho trứng cút · Canh rau ngót thịt bằm · Su su luộc chấm vừng · Cơm gạo tẻ trộn gạo lứt · Dưa lê</td><td class="dl">Thịt 50 / 70 / 90g · Cơm ½ / 1 / 1–1,5 bát</td></tr>
-          <tr><td class="bua">Chiều<small class="chot">chốt sữa trước 18h</small></td><td>Sữa tươi (cữ cuối ngày) · Hạt hỗn hợp · Phô mai tách muối (từ 10 tuổi)</td><td class="dl">180 / 200 / 240ml · 3–5 / 5–8 / 8–10 hạt</td></tr>
-          <tr><td class="bua">Tối<small>xong trước 19h30</small></td><td>Cá hồi áp chảo sốt chanh · Canh cua đồng rau đay mướp · Cải chíp xào tỏi rắc mè · Cơm linh hoạt 4-2-0</td><td class="dl">Cá 60 / 80 / 100g · Cơm 0–½ / ½–1 / 1 bát</td></tr>
-        </tbody>
-      </table>
+    <div class="anh-demo">
+      <figure data-c="1"><img src="anh/ngay-01.jpg" alt="Trang thực đơn Ngày 01, Thứ Ba 01/09" loading="lazy" width="1100" height="825"><figcaption><b>Ngày 01 · 01/09</b> Chặng Khởi động</figcaption></figure>
+      <figure data-c="2"><img src="anh/ngay-09.jpg" alt="Trang thực đơn Ngày 09, Thứ Tư 09/09" loading="lazy" width="1100" height="765"><figcaption><b>Ngày 09 · 09/09</b> Chặng Tăng tốc</figcaption></figure>
+      <figure data-c="3"><img src="anh/ngay-16.jpg" alt="Trang thực đơn Ngày 16, Thứ Tư 16/09" loading="lazy" width="1100" height="529"><figcaption><b>Ngày 16 · 16/09</b> Chặng Bứt phá</figcaption></figure>
+      <figure data-c="4"><img src="anh/ngay-25.jpg" alt="Trang thực đơn Ngày 25, Trung thu 25/09" loading="lazy" width="1100" height="740"><figcaption><b>Ngày 25 · 25/09</b> Chặng Duy trì · Trung thu</figcaption></figure>
     </div>
+    <p class="anh-goi-y">Ảnh là một phần trang thực đơn. Bản đầy đủ có cả bữa chiều, bữa tối và ghi chú từng món.</p>
     <p class="mo-khoa">Còn 29 ngày nữa, cộng thực đơn riêng cho Quốc khánh 02/9, Khai giảng 05/9 và Trung thu 25/9.</p>
   </section>
 
