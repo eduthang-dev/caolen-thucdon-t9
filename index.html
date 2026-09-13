@@ -165,6 +165,28 @@ h2{color:var(--do-dam)}
   .form .hai{grid-template-columns:1fr}
   .ngay i{display:none}
 }
+
+/* ===== Điện thoại: bảng thực đơn thành từng thẻ, không cuộn ngang ===== */
+@media (max-width:640px){
+  body{font-size:17px}
+  .hero{border-radius:20px;padding:22px 18px}
+  .hero .mo{font-size:1.08rem}
+  .lich{padding:14px}
+  .lich .tren{flex-wrap:wrap;gap:4px}
+  .bang-wrap{overflow:visible;background:transparent;box-shadow:none}
+  .bang{min-width:0;display:block}
+  .bang thead{display:none}
+  .bang tbody{display:grid;gap:12px}
+  .bang tr{display:grid;gap:6px;background:var(--mat);border:1px solid var(--vien);border-radius:14px;padding:14px 16px}
+  .bang td{display:block;padding:0;border:0}
+  .bang .bua{font-size:1.05rem;color:var(--do-dam)}
+  .bang .bua small{display:inline;margin-left:6px}
+  .bang .dl{white-space:normal;font-size:.92rem}
+  .bang .dl::before{content:"Định lượng 6–10t / 11–15t / 16–18t: ";font-weight:600;color:var(--muc)}
+  .loi-nhan,.chang,.tac,.mau,.nhan-qua{padding-block:40px}
+  .form{padding:18px}
+  .tac li{grid-template-columns:32px 1fr;padding:12px 14px}
+}
 @media (prefers-reduced-motion:reduce){.nut{transition:none}}
 </style>
 </head>
