@@ -226,6 +226,7 @@ h2{color:var(--do-dam)}
       <div class="tren"><b>Tháng 9 · 2026</b><span>5 chặng · 30 ngày</span></div>
       <div class="luoi" id="luoi">
         <div class="thu">T2</div><div class="thu">T3</div><div class="thu">T4</div><div class="thu">T5</div><div class="thu">T6</div><div class="thu">T7</div><div class="thu">CN</div>
+        <div class="ngay trong"></div><div class="ngay" data-c="1"><span>1</span></div><div class="ngay su-kien" data-c="1"><span>2</span><i>Quốc khánh</i></div><div class="ngay" data-c="1"><span>3</span></div><div class="ngay" data-c="1"><span>4</span></div><div class="ngay su-kien" data-c="1"><span>5</span><i>Khai giảng</i></div><div class="ngay" data-c="1"><span>6</span></div><div class="ngay" data-c="1"><span>7</span></div><div class="ngay" data-c="2"><span>8</span></div><div class="ngay" data-c="2"><span>9</span></div><div class="ngay" data-c="2"><span>10</span></div><div class="ngay" data-c="2"><span>11</span></div><div class="ngay" data-c="2"><span>12</span></div><div class="ngay" data-c="2"><span>13</span></div><div class="ngay" data-c="2"><span>14</span></div><div class="ngay" data-c="3"><span>15</span></div><div class="ngay" data-c="3"><span>16</span></div><div class="ngay" data-c="3"><span>17</span></div><div class="ngay" data-c="3"><span>18</span></div><div class="ngay" data-c="3"><span>19</span></div><div class="ngay" data-c="3"><span>20</span></div><div class="ngay" data-c="3"><span>21</span></div><div class="ngay" data-c="4"><span>22</span></div><div class="ngay" data-c="4"><span>23</span></div><div class="ngay" data-c="4"><span>24</span></div><div class="ngay su-kien" data-c="4"><span>25</span><i>Trung thu</i></div><div class="ngay" data-c="4"><span>26</span></div><div class="ngay" data-c="4"><span>27</span></div><div class="ngay" data-c="4"><span>28</span></div><div class="ngay" data-c="5"><span>29</span></div><div class="ngay" data-c="5"><span>30</span></div>
       </div>
       <div class="chu-giai">
         <div><s style="background:var(--c1)"></s>Khởi động</div>
@@ -336,18 +337,6 @@ h2{color:var(--do-dam)}
 
 <script>
 (function(){
-  var luoi=document.getElementById('luoi');
-  var chang=function(d){return d<=7?1:d<=14?2:d<=21?3:d<=28?4:5};
-  var suKien={2:'Quốc khánh',5:'Khai giảng',25:'Trung thu'};
-  // 01/09/2026 là Thứ Ba → 1 ô trống ở Thứ Hai
-  var trong=document.createElement('div'); trong.className='ngay trong'; luoi.appendChild(trong);
-  for(var d=1; d<=30; d++){
-    var o=document.createElement('div');
-    o.className='ngay'+(suKien[d]?' su-kien':'');
-    o.setAttribute('data-c',chang(d));
-    o.innerHTML='<span>'+d+'</span>'+(suKien[d]?'<i>'+suKien[d]+'</i>':'');
-    luoi.appendChild(o);
-  }
   var f=document.getElementById('form-nhan');
   f.addEventListener('submit',function(e){e.preventDefault();document.getElementById('cam-on').classList.add('hien');});
 })();
